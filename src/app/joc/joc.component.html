@@ -3,6 +3,7 @@
     [ngStyle]="{ 'top.px': 100 + i * 120 }"
     [name] = "player"
     [posicio] = i
+    [score] = game!.score[i]
     class="player-position"
   ></app-jugador>
 }
@@ -42,7 +43,7 @@
 
   </div>
 
-  <div class="start-label-box">
+  <div class="start-label-box" (click)="pasarJugador()">
     <img src="assets/img/play.png" alt="">
   </div>
 

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-jugador',
@@ -7,10 +7,15 @@ import {Component, Input} from '@angular/core';
   templateUrl: './jugador.component.html',
   styleUrl: './jugador.component.css'
 })
-export class JugadorComponent {
+export class JugadorComponent implements OnInit{
 
   @Input() name: any;
   @Input() posicio: any;
+  @Input() score: any;
 
   constructor() {}
+
+  ngOnInit() {
+  }
+
 }
